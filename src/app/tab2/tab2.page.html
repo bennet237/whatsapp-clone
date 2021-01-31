@@ -1,0 +1,29 @@
+<ion-content>
+
+    <ion-list>
+
+      <ion-item *ngFor = 'let list of cList'>
+        <ion-avatar class="ion-margin">
+          <ion-img [src] = 'list.picture'></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h1><b>{{list.name}}</b></h1>
+          <h2>{{list.phone_number}}</h2>
+        </ion-label>
+
+        <ion-buttons>
+          <ion-button>
+            <ion-icon name="chevron-forward-outline" class="ion-float-right" color="whatsapp"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
+      </ion-item>
+
+    </ion-list>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button color="primary"> 
+        <ion-icon name="paper-plane-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
