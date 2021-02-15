@@ -1,25 +1,71 @@
 
-<ion-tabs>
-  <ion-tab-bar slot="top"  color="primary">
+  <ion-menu menu-id="push" class="ion-no-margin" content-id="main" class="menu-one" side="end">
+    <ion-content>
+      <ion-list lines="none">
+        <ion-item>New group</ion-item>
+        <ion-item>New broadcast</ion-item>
+        <ion-item>WhatsApp Web</ion-item>
+        <ion-item>Starred messages</ion-item>
+        <ion-item>Settings</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
 
-    <ion-tab-button tab="tab1">
-      <ion-icon name="camera" ></ion-icon>
-    </ion-tab-button>
+<ion-header>
+  <ion-toolbar color="primary" mode="ios" class="bordered">
+  <ion-grid>
+    <ion-row>
 
-    <ion-tab-button tab="tab2">
-      <ion-label>CHATS</ion-label>
-    </ion-tab-button>
+      <ion-col size="4">
+        <div><b>WhatsApp</b></div>
+      </ion-col>
 
-    <ion-tab-button tab="tab3">
-      <ion-label>STATUS</ion-label>
-    </ion-tab-button>
+      <ion-col size="7">
+            <ion-searchbar class="searchbar-1" show-cancel-button="focus" disabled="false" class="bordered" autocorrect="true" spellcheck="true"></ion-searchbar>
+      </ion-col>
 
-    <ion-tab-button tab="tab4">
-      <ion-label>CALLS</ion-label>
-    </ion-tab-button>
+      <ion-col size="1">
+        <ion-buttons>
+          <ion-menu-button menu="push" auto-hide="false" slot="end">
+            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+          </ion-menu-button>
+        </ion-buttons>
+      </ion-col>
 
-  </ion-tab-bar>
-</ion-tabs>
+    </ion-row>
+  </ion-grid>
+  </ion-toolbar>
+</ion-header>  
+
+<ion-router-outlet id="main"></ion-router-outlet>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="top"  color="primary"> 
+
+      <ion-tab-button tab="tab1" (click)="addPhotoToGallery()">
+          <ion-icon name="camera"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button tab="tab2">
+        <ion-label>CHATS</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="tab3">
+        <ion-label>STATUS</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="tab4">
+        <ion-label>CALLS</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>
+
+
+
+
 
 
 
